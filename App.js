@@ -1,15 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import {Searchbar} from 'react-native-paper';
 
 const App = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const onChangeSearch = query => setSearchQuery(query);
   return (
     <>
       <SafeAreaView style={styles.container}>
         <View style={styles.searchBar}>
-          <Text style={{color: 'black', padding: 15}}>Hello World!</Text>
+          <Searchbar
+            placeholder="Search"
+            onChangeText={onChangeSearch}
+            value={searchQuery}
+          />
         </View>
         <View style={styles.list}>
-          <Text>Hello World!</Text>
+          <Text>List items</Text>
         </View>
       </SafeAreaView>
     </>
@@ -22,11 +30,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   searchBar: {
+    padding: 15,
     backgroundColor: '#fff',
+    borderBottomWidth: 2,
   },
   list: {
     flex: 1,
     backgroundColor: 'green',
+    padding: 15,
   },
 });
 
