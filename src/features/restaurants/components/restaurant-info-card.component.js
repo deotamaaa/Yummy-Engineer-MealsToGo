@@ -5,6 +5,7 @@ import {Card, Paragraph, Title} from 'react-native-paper';
 import {SvgXml} from 'react-native-svg';
 import star from '../../../../assets/star';
 import open from '../../../../assets/open';
+import {Spacer} from '../../../components/spacer/spacer.component';
 
 const CardTitle = styled(Text)`
   color: ${props => props.theme.colors.ui.primary};
@@ -73,9 +74,8 @@ export const RestaurantInfoCard = ({restaurant = {}}) => {
               <Text style={{color: 'red'}}> CLOSED TEMPORARILY </Text>
             )}
             {isOpenNow && <SvgXml xml={open} width={20} height={20} />}
-            <View style={{marginLeft: 10}}>
-              <Image style={{width: 15, height: 15}} source={{uri: icon}} />
-            </View>
+            <Spacer position="left" size="large" />
+            <Image style={{width: 15, height: 15}} source={{uri: icon}} />
           </SectionEnd>
         </Section>
         <Address>{address}</Address>
