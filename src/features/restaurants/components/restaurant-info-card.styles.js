@@ -1,10 +1,12 @@
 import styled from 'styled-components/native';
-import {Card, Paragraph, Title} from 'react-native-paper';
+import {Card, Paragraph} from 'react-native-paper';
 export const Icon = styled.Image`
   width: 22px;
   height: 22px;
 `;
-
+export const RestaurantCard = styled(Card)`
+  margin-bottom: 16px;
+`;
 export const RestaurantCardCover = styled(Card.Cover)`
   padding: ${props => props.theme.space[3]};
   background-color: ${props => props.theme.colors.bg.primary};

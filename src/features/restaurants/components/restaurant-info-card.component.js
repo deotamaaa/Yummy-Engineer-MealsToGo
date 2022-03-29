@@ -14,6 +14,7 @@ import {
   Address,
   Section,
   SectionEnd,
+  RestaurantCard,
 } from './restaurant-info-card.styles';
 
 export const RestaurantInfoCard = ({restaurant = {}}) => {
@@ -32,7 +33,7 @@ export const RestaurantInfoCard = ({restaurant = {}}) => {
   const ratingArray = Array.from(new Array(Math.floor(rating)));
 
   return (
-    <Card elevation={5}>
+    <RestaurantCard elevation={5}>
       <RestaurantCardCover source={{uri: photos[0]}} />
       <Info>
         <Text variant="label">{name}</Text>
@@ -53,6 +54,6 @@ export const RestaurantInfoCard = ({restaurant = {}}) => {
         </Section>
         <Address>{address}</Address>
       </Info>
-    </Card>
+    </RestaurantCard>
   );
 };
