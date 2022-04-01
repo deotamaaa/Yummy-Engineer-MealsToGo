@@ -1,3 +1,4 @@
+import 'react-native-gesture-handler';
 import React from 'react';
 import {ThemeProvider} from 'styled-components/native';
 import {theme} from './src/infrastructure/theme/index';
