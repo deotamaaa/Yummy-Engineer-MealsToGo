@@ -5,20 +5,13 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import {Text, View} from 'react-native';
 
 import {RestaurantsScreen} from '../../features/restaurants/screens/restaurants.screen';
-
+import {MapScreen} from '../../features/map/screens/map.screen';
 import {RestaurantsNavigator} from './restaurants.navigator';
+
 function SettingsScreen() {
   return (
     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
       <Text>Settings!</Text>
-    </View>
-  );
-}
-
-function MapScreen() {
-  return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>Map!</Text>
     </View>
   );
 }
